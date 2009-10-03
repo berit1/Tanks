@@ -4,17 +4,7 @@
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 
-\f0\fs24 \cf0 KLONA REPOSITORY\
-\
-git clone git://github.com/rails/rails.git\
-Initialized empty Git repository in /Users/Junling/Documents/Tddc88/exercise8/rails/.git/\
-remote: Counting objects: 117256, done.\
-remote: Compressing objects: 100% (25910/25910), done.\
-remote: Total 117256 (delta 90592), reused 116364 (delta 89921)\
-Receiving objects: 100% (117256/117256), 20.82 MiB | 2404 KiB/s, done.\
-Resolving deltas: 100% (90592/90592), done.\
-
-\b \
+\f0\b\fs24 \cf0 \
 \pard\pardeftab720
 
 \f1\fs22 \cf0 You have a source code project (a set of files) on your local hard drive and want to create a\
@@ -87,4 +77,51 @@ Date:   Mon Sep 7 19:29:48 2009 +0300\
 create a development branch from the main trunk (called master in Git). You do some\
 modifications in the new branch and then merge back the changes to the trunk.\
 \
+
+\b0 viktor-junlings-macbook:Tanks Junling$ git branch feature_1\
+viktor-junlings-macbook:Tanks Junling$ git branch\
+  feature_1\
+* master\
+viktor-junlings-macbook:Tanks Junling$ git checkout feature_1\
+Switched to branch 'feature_1'\
+viktor-junlings-macbook:Tanks Junling$ git branch\
+* feature_1\
+  master\
+viktor-junlings-macbook:Tanks Junling$ git add Git.rtf\
+warning: LF will be replaced by CRLF in Git.rtf\
+viktor-junlings-macbook:Tanks Junling$ git commit -a -m 'update Git file'\
+warning: LF will be replaced by CRLF in Git.rtf\
+[feature_1 90054ba] update Git file\
+ 1 files changed, 44 insertions(+), 9 deletions(-)\
+viktor-junlings-macbook:Tanks Junling$ git branch\
+* feature_1\
+  master\
+viktor-junlings-macbook:Tanks Junling$ git checkout master\
+Switched to branch 'master'\
+viktor-junlings-macbook:Tanks Junling$ git merge feature_1\
+Updating cbc643b..90054ba\
+Fast forward\
+ Git.rtf |   53 ++++++++++++++++++++++++++++++++++++++++++++---------\
+ 1 files changed, 44 insertions(+), 9 deletions(-)\
+viktor-junlings-macbook:Tanks Junling$ git log -n1\
+commit 90054baeefaaa49e5a5cc0c44d0ed21cde0c350a\
+Author: Viktor Junling <vikju561@student.liu.se>\
+Date:   Sat Oct 3 09:51:40 2009 +0200\
+\
+    update Git file\
+viktor-junlings-macbook:Tanks Junling$ git branch\
+  feature_1\
+* master\
+viktor-junlings-macbook:Tanks Junling$ git branch -d feature_1\
+Deleted branch feature_1 (was 90054ba).\
+viktor-junlings-macbook:Tanks Junling$ git push\
+Counting objects: 5, done.\
+Delta compression using up to 2 threads.\
+Compressing objects: 100% (3/3), done.\
+Writing objects: 100% (3/3), 1.14 KiB, done.\
+Total 3 (delta 1), reused 0 (delta 0)\
+To git@github.com:berit1/Tanks.git\
+   cbc643b..90054ba  master -> master\
+viktor-junlings-macbook:Tanks Junling$ 
+\b \
 }
