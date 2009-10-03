@@ -24,21 +24,13 @@ new repository, so that you can track changes.\
 viktor-junlings-macbook:Tanks Junling$ git init\
 Initialized empty Git repository in /Tanks/.git/\
 viktor-junlings-macbook:Tanks Junling$ touch README\
-viktor-junlings-macbook:Tanks Junling$ ls\
 Git.rtf	README\
 viktor-junlings-macbook:Tanks Junling$ git add README\
-viktor-junlings-macbook:Tanks Junling$ ls\
 Git.rtf	README\
-viktor-junlings-macbook:Tanks Junling$ git commit -m \'b4first commit\'b4\
-error: pathspec 'commit\'b4' did not match any file(s) known to git.\
 viktor-junlings-macbook:Tanks Junling$ git commit -m 'first commit'\
 [master (root-commit) 6dc6ade] first commit\
  0 files changed, 0 insertions(+), 0 deletions(-)\
  create mode 100644 README\
-viktor-junlings-macbook:Tanks Junling$ git remote add origin git\'99github.com>berit1/Tanks.git\
--bash: berit1/Tanks.git: No such file or directory\
-viktor-junlings-macbook:Tanks Junling$ git remote add origin git@github.com>berit1/Tanks.git\
--bash: berit1/Tanks.git: No such file or directory\
 viktor-junlings-macbook:Tanks Junling$ git remote add origin git@github.com:berit1/Tanks.git\
 viktor-junlings-macbook:Tanks Junling$ git push origin master\
 Counting objects: 3, done.\
@@ -52,4 +44,47 @@ viktor-junlings-macbook:Tanks Junling$
 
 \b0 We  got to the project we want to create an repository in and write "git init" this initiates and empty repository within the project. Then we add a file we want to track by "git add README" for example. We have also created an repository on github which we want to remotly get connected to and be allowed to make commits to. In the end we push the file README to the repository at github!\
 \
- }
+
+\b You want to down load an existing open source project available on the web and then\
+browse the history of changes in the project.\
+
+\b0 \
+viktor-junlings-macbook:web-app-theme Junling$ 
+\b git log
+\b0 \
+commit e143fbd7a18b291d5bd6985b46decc8bf92106bf\
+Author: Andrea Franz <andrea@gravityblast.com>\
+Date:   Sun Sep 27 17:12:38 2009 +0200\
+\
+    fixed typo\
+\
+commit f61182c4d2ca65fba6a9f3dcf0fd9175a0e47d31\
+Author: Andrea Franz <andrea@gravityblast.com>\
+Date:   Sun Sep 27 17:08:22 2009 +0200\
+\
+    added themed generation for text pages like home or dashboard\
+\
+commit 14a4f8d328b4b9806f639fd1fc31d7e4fdcd36ff\
+Author: Andrea Franz <andrea@gravityblast.com>\
+Date:   Sat Sep 19 00:26:27 2009 +0200\
+\
+    fixed resource name generation\
+\
+commit b872c2761a876c3b8b71e735febfb63de81c6a83\
+Author: Stas SUSHKOV <stas@net.utcluj.ro>\
+Date:   Mon Sep 7 21:59:53 2009 +0300\
+\
+    Some CSS fixes for input and textarea elements in Firefox\
+\
+commit f96b93794daf5e838b2932222384e390b18cdf63\
+Author: Stas SUSHKOV <stas@net.utcluj.ro>\
+Date:   Mon Sep 7 19:29:48 2009 +0300\
+\
+ With "git log" you get all the changes that have been made with project as you can see above. This perticular project have a lot more commits but we choose to short it down abit!\
+\
+
+\b Your are thinking of developing a complete new part in a project and therefore wants to\
+create a development branch from the main trunk (called master in Git). You do some\
+modifications in the new branch and then merge back the changes to the trunk.\
+\
+}
