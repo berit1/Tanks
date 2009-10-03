@@ -119,4 +119,9 @@ Date:   Sat Oct 3 10:13:46 2009 +0200
 
 If you use the command ?git log ?n1? you?ll get the last commit, what files and the author of the commit. Then you can contact him or her.
 
+You are planning to make a new release of your software and want to mark in the SCM
+system the exact version for this release (let us call it version 1.2). You are then editing and
+committing some new changes to the repository. Suddenly, your boss says that he wants to
+have an email with a snapshot of the source code for version 1.2
+
 
